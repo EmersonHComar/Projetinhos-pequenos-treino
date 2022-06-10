@@ -5,9 +5,9 @@ def verifica():
             if num >= 0:
                 return num
             else:
-                print("Digite apenas um número natural")
+                print("Digite apenas números naturais")
         except:
-            print("Digite apenas um número natural")
+            print("Digite apenas números naturais")
 
 def nmrsDecimais(numero):
     casas = 0
@@ -38,10 +38,15 @@ def escreve(numero, casas, zeros):
                 if cont != 0:
                     print("%d --> %s" %(cont, palavra))
         casas -= 1
-while True:
-    numero = verifica()
-    if numero == 0:
-        break
-    casas, zeros = nmrsDecimais(numero)
-    escreve(numero, casas, zeros)
-    print("\n")
+
+def main():
+    while True:
+        numero = verifica()
+        if numero == 0:
+            break
+        casas, zeros = nmrsDecimais(numero)
+        escreve(numero, casas, zeros)
+        print("\n")
+        
+if __name__=="__main__":
+    main()
